@@ -1,0 +1,43 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body, li{
+    font-family: "Source Sans 3", sans-serif;
+}
+
+footer{
+    text-align: center;
+}
+
+.footer{
+    background-color: #202020;
+    color: white;
+}
+
+.footer span{
+    display: block;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+li{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+/* "Roboto", sans-serif  "Source Sans 3", sans-serif; */
