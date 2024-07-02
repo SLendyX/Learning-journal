@@ -8,13 +8,25 @@ body, li{
     font-family: "Source Sans 3", sans-serif;
 }
 
-footer{
-    text-align: center;
+.footer, .header, ul{
+    display: flex;
 }
 
 .footer{
+    text-align: center;
     background-color: #202020;
-    color: white;
+    color: #ECECEC;
+    font-weight: 700;
+    font-size: 0.75rem;
+    flex-direction: column;
+    gap: 0.25em;
+    padding: 3em 0;
+    letter-spacing: 1px;
+}
+
+.copyright{
+    font-weight: 400;
+    color:#D7D7D7;
 }
 
 .footer span{
@@ -23,21 +35,37 @@ footer{
 
 ul{
     list-style: none;
-    display: flex;
     gap: 2em;
 }
 
 li{
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
 }
 
+a{
+    color:#090909;
+    text-decoration: none;
+}
+
+
 .header{
-    display: flex;
     justify-content: space-between;
-    padding: 24px 24px;
+    padding: 1.5em 1.5em;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
+}
+
+.header-title{
+    color:#0E0E0E;
+    font-weight: 700;
+    font-size: 0.875rem
+}
+
+.dark{
+    color:white;
 }
 
 /* "Roboto", sans-serif  "Source Sans 3", sans-serif; */
