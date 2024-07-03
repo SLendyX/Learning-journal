@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>My Learning Journal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +13,32 @@
                 <h3 class="header-title">My learning journal</h3>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About me</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about_me.html">About me</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main>
-            <article class="">
-                <time>July 2, 2024</time>
-                <h1>My frontend developer career path journey is almost halfway!</h1>
-                <p>I have come a long way up to this point, and honestly longer
-                    then it should have been, but finaly the important thing is that I 
-                    finnaly reached this point. I am most exicted by the React courses out of all!
-                </p>
-            </article>
+        <main id="article-body">
+            <a href="career-path-journey.html">
+                <article class="first-article light">
+                    <time>July 2, 2024</time>
+                    <h1>My frontend developer career path journey is almost halfway!</h1>
+                    <p>I have come a long way up to this point, and honestly longer
+                        then it should have been, but finaly the important thing is that I 
+                        finnaly reached this point. I am most exicted by the React courses out of all!
+                    </p>
+                </article>
+            </a>
+            
         </main>
         <footer>
             <div class="container footer">
                 <span>My Learning Journal</span> 
                 <span class="copyright">Copyright &copy;2024</span>
             </div>
-        </footer>   
+        </footer>
+        <script src="/scripts/index.js" type="module"></script>  
     </body>
 </html>
 
