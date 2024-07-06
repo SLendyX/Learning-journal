@@ -209,7 +209,7 @@ p{
 .first-article{
     margin: 0 0 2.5625em;
     padding: 4.125em 1.25em 1.5625em;
-    background-image: url("/images/title-image.png");
+    background-image: url("/images/title-image.webp");
     background-size:cover;
     background-position: bottom;
     width: 100%;

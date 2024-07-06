@@ -21,7 +21,7 @@ function renderArticles(articleArray){
     articleArray.forEach(element => {
         articles+=`
         <article class="blog-item">
-        <a href="${element.link}"><img src="/images/blog${element.image}-image.png"></a>
+        <a href="${element.link}"><img src="/images/blog${element.image}-image.webp"></a>
             <time>${element.date}</time>
             <h1>${element.title}</h1>
             <p>${element.content}</p>
