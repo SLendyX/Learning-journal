@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
 html, 
 body {
     margin: 0;
@@ -16,8 +24,12 @@ body, a{
     display: flex;
 }
 
-.footer, li, time{
+.footer, time{
     font-size: 0.75rem;
+}
+
+li{
+    font-size: 0.8rem
 }
 
 ul, time{
@@ -25,7 +37,18 @@ ul, time{
 }
 
 .hidden{
-    display: none;
+    display:none;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity:0;
+        transform: translateX(200%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 /* footer */
@@ -39,6 +62,7 @@ ul, time{
     padding: 3em 0;
     letter-spacing: 1px;
     margin-top: 3.5em;
+    width:100%
 }
 
 .copyright{
@@ -53,16 +77,47 @@ ul, time{
 /* header */
 
 ul{
+    padding-inline-start: 0px;
     list-style: none;
     gap: 1em;
     font-weight: 600;
-    color:#090909;
+    color:#ECECEC;
+    position:absolute;
+    top:60px;
+    left: -100%;
+    transition: all 0.5s;
+    background-color: #292727b9;
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li{
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #ECECEC;
+    width: 100%;
+    text-align: center;
 }
 
 a{
     color:inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+.menu-bars{
+    cursor: pointer;
+}
+
+#show-menu{
+    display: none;
+}
+
+#show-menu:checked ~ ul{
+    left: 0;
 }
 
 
@@ -162,13 +217,18 @@ p{
     flex-direction: column;
 }
 
-.blog-item-hidden{
+.transform{
     transform: translateX(100%);
-    transition: transform ease-out 0.3s;
 }
 
-.blog-item-hidden.show{
-    transform: translateX(0%);
+.blog-item{
+    transition: all 0.5s;
+    transition-behavior: allow-discrete;
+}
+
+.hidden.show{
+    display: block;
+    animation: fade-in 500ms forwards;
 }
 
 
@@ -227,13 +287,29 @@ h3{
         height: 488px;
         justify-content: end;
     }
-    
+    .menu-bars{
+        display: none;
+    }
+
+    ul{
+        position: initial;
+        background: none;
+        flex-direction: row;
+        color:#0E0E0E;
+        transition: none;
+    }
+
+    ul li{
+        width: initial;
+        border-bottom: none;
+    }
+
 }
 
 @media (min-width:557px){
     .thumbnail{
             height: 488px;
-    }
+    }    
 }
 
 @media (min-width: 950px){

@@ -9,6 +9,11 @@ import { articleArray } from "./article_data.js";
 </article>
 */
 const articleBodyEl = document.getElementById("article-body");
+const menuBtn = document.getElementById("show-menu");
+
+menuBtn.addEventListener("click", e =>{
+        document.body.classList.toggle("overflow")
+})
 
 
 function renderArticles(articleArray){
@@ -30,7 +35,7 @@ function renderArticles(articleArray){
     for(let element of blogItems){
         if(i > 5){
             element.classList.toggle("hidden")
-            element.classList.toggle("blog-item-hidden")
+            // element.classList.toggle("transform")
         }
         i++;
 
@@ -49,10 +54,12 @@ function createViewMoreBtn(blogItems){
     btn.addEventListener("click", e => {
         for(let element of blogItems){
             if(element.className.split(" ")[1] === "hidden"){
-                element.classList.toggle("hidden")
+                // element.classList.toggle("hidden")
                 element.classList.add('show')
+                             
             }
         }
+        // window.scrollTo(0, (document.body.scrollHeight/2.5));   
         btn.classList.toggle("hidden")
     })
     
